@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag dannamendoza/pokedex:latest
 
     - name: docker Push
-      run: docke push dannamendoza/pokedex
+      run: docker push dannamendoza/pokedex
