@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: rgba(255, 255, 255, 0.1);
+    --card-background: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/background.jpg'); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.glassmorphism {
+    background: var(--background-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.pokenea-details {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.pokenea-card {
+    flex: 1;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pokenea-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pokenea-info {
+    flex: 2;
+}
+
+.pokenea-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: wheat;
+}
+
+.pokenea-stats {
+    margin-bottom: 20px;
+}
+
+.pokenea-stats p {
+    margin: 10px 0;
+    color: whitesmoke;
+}
+
+.pokenea-body {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

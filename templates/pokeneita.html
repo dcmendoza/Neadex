@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<link rel="icon" href="{{ url_for('static', filename='images/utility/loveball.ico') }}" type="image/x-icon">
+			<title>Pokedex - {{ pokenea.nombre }} </title>
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/pokeneita.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/pokedex.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			<header class="glassmorphism">
+				<h1>Conoce mas a {{ pokenea.nombre }}</h1>
+                <a href="/" class="btn btn-primary">Volver</a>
+			</header>
+
+			<nav class="buttons glassmorphism">
+				<a href="/api" class="btn">Acceder a la API total</a>
+				<a href="/api/pokenea" class="btn">API de Pokenea aleatorio</a>
+				<a href="/pokenea" class="btn">Sorprendeme</a>
+			</nav>
+
+			<main class="glassmorphism">
+                <div class="pokenea-details">
+                    <div class="pokenea-card">
+                        <img src="{{ pokenea.body }}" alt="{{ pokenea.nombre }}">
+                    </div>
+                    <div class="pokenea-info">
+                        <div class="pokenea-name">{{ pokenea.nombre }}</div>
+                        <div class="pokenea-stats">
+                            <p><strong>Altura:</strong> {{ pokenea.altura }}</p>
+                            <p><strong>Habilidad:</strong> {{ pokenea.habilidad }}</p>
+                            <p><strong>Frase filosófica:</strong> {{ pokenea.frase_filosofica }}</p>
+                        </div>
+                        <img src="{{ pokenea.card }}" alt="{{ pokenea.nombre }} cuerpo completo" class="pokenea-body">
+                    </div>
+                </div>
+            </main>
+		</div>
+
+		<footer>
+			<p>&copy; 2024 Pokedex de Pokeneas. Todos los derechos reservados.</p>
+			<p>ID del contenedor: {{ container_id }}</p>
+			<p>Desarrollado por: Danna Mendoza y Paulina Cerón</p>
+		</footer>
+	</body>
+</html>
